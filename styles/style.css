@@ -16,6 +16,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  padding: 133px 30px;
 }
 
 h1,
@@ -35,4 +36,278 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content{
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.result__video-container{
+  position: relative;
+  top: 78px;
+  /*left: 30px;*/
+  /*margin: 78px 0 16px 0;*/
+  width: 711px;
+  height: 386px;
+}
+
+.result__video{
+  width: 100%;
+  height: 100%;
+}
+
+.search-form{
+  position: relative;
+  top:94px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.search-form__fieldset{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 5px;
+}
+
+.search-form__fieldset-title{
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.visually-hidden{
+  display: none;
+}
+
+.search-form__textfield{
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: rgba(255, 255, 255, 0.70);
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  width: 225px;
+}
+
+.search-form__textfield:active{
+  border: 1px solid #FFF; 
+}
+
+.search-form__textfield:has(:focus-visible){
+  border: 1px solid #FFF; 
+}
+
+.search-form__textfield:focus{
+  border: none; 
+}
+
+.search-form__checkbox-list{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-form__label{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.search-form__label:hover{
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible){
+  border: 1px solid #FFF;
+}
+
+.search-form__pseudo-checkbox{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1px solid #FFF;
+}
+
+/* для элемента input c type="checkbox" */
+.search-form__label>.search-form__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.search-form__label>.search-form__pseudo-checkbox {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.search-form__label>.search-form__pseudo-checkbox::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.search-form__label>.search-form__checkbox:not(:disabled):active+.search-form__pseudo-checkbox::before {
+  background-color: #fff;
+  border-color: #000;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.search-form__label>.search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
+  background-color: #fff;
+}
+
+.button{
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  background-color: transparent;
+}
+
+.button:active{
+  background-color: #545050;
+}
+
+.button:hover{
+  text-decoration: underline;
+}
+
+.button:focus{
+  border: 1px solid #FFF;
+}
+
+.search-form__submit-button{
+  margin: 20px 0 0 0;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 194px;
+}
+
+.content__details{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 75px;
+  font-family: Oswald, sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 94%;
+  margin-bottom: 26px;
+}
+
+.content__accent{
+  color: #545050;
+}
+
+.content__list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 298px;
+  overflow-y: scroll;
+  gap: 30px;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.content__list-item{
+  padding: 2px 0 4px 2px;
+  box-sizing: border-box;
+}
+
+.content__card-link_current{
+  background-color: #545050;
+}
+
+.content__list-item:active{
+  background-color: #545050;
+}
+
+.content__list-item:hover{
+  text-decoration: underline;
+}
+
+.content__list-item:focus{
+  border: 1px solid #FFF;
+}
+
+.content__video-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__card-link{
+  text-decoration: none;
+}
+
+.content__video-card-title{
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.content__video-card-description{
+  color: #FFF;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+.content__video-card-thumbnail{
+  height: 103px;
+}
+
+.more-button{
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 399px;
+}
+
+.error__title{
+  color: #FFF;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.preloader{
+  position: relative;
+  top:211px;
+  left: 30px;
 }

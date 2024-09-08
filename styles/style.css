@@ -246,19 +246,20 @@ ol {
   background-color: #545050;
 }
 
-.content__list-item:active{
+.content__card-link:active{
   background-color: #545050;
 }
 
-.content__list-item:hover{
+.content__card-link:hover{
   text-decoration: underline;
+  color: #FFF;
 }
 
-.content__list-item:focus{
+.content__card-link:focus{
   outline: none;
 }
 
-.content__list-item:focus-visible{
+.content__card-link:focus-visible{
   outline: 1px solid #FFF;
 }
 

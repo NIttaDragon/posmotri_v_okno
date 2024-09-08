@@ -11,7 +11,8 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
+  /*margin: auto;*/
+  margin: 133px auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -48,8 +49,6 @@ ol {
 .result__video-container{
   position: relative;
   top: 78px;
-  /*left: 30px;*/
-  /*margin: 78px 0 16px 0;*/
   width: 711px;
   height: 386px;
 }
@@ -139,7 +138,6 @@ ol {
 
 /* для элемента input c type="checkbox" */
 .search-form__label>.search-form__checkbox {
-  /*position: absolute;*/
   z-index: -1;
   opacity: 0;
 }

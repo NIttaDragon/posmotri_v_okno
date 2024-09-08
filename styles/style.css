@@ -40,7 +40,7 @@ ol {
 }
 
 .content{
-  margin: auto;
+  margin: 133px 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;

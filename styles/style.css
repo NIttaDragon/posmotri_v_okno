@@ -12,7 +12,6 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  /*margin: 133px auto;*/
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -82,7 +81,13 @@ ol {
 }
 
 .visually-hidden{
-  display: none;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
 
 .search-form__textfield{
@@ -92,8 +97,8 @@ ol {
   color: #FFF;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   width: 225px;
 }
 
@@ -146,7 +151,7 @@ ol {
   opacity: 0;
 }
 
-/* для элемента label, связанного с .custom-checkbox */
+/* для элемента label, связанного с .pseudo-checkbox */
 .search-form__label>.search-form__pseudo-checkbox {
   display: inline-flex;
   align-items: center;

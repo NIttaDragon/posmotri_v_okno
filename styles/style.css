@@ -106,12 +106,12 @@ ol {
   border: 1px solid #FFF; 
 }
 
-.search-form__textfield:has(:focus-visible){
+.search-form__textfield:focus-visible{
   outline: 1px solid #FFF; 
 }
 
 .search-form__textfield:focus{
-  border: none; 
+  outline: none; 
 }
 
 .search-form__checkbox-list{
@@ -226,7 +226,7 @@ ol {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 94%;
-  margin-bottom: 26px;
+  margin-bottom: 19px;
 }
 
 .content__accent{
@@ -239,13 +239,16 @@ ol {
   flex-direction: column;
   max-height: 298px;
   overflow-y: scroll;
-  gap: 30px;
 }
 
 .content__list-item{
-  padding: 2px 0 4px 2px;
+  padding: 1px 0; /*я оставлю здесь такой марджин, т.к иначе обводку у карточки при focus-visible не видно целиком*/
   box-sizing: border-box;
 }
+
+.content__list-item:not(:last-of-type) { /*а за эту подсказку большое спасибо*/
+  margin-bottom: 30px;
+} 
 
 .content__card-link_current{
   background-color: #545050;
